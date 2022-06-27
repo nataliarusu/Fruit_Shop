@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+}
+:root{
+  --main-light-blue:#82faff;
+  --main-dark-blue:#61cace;
+}
+body {
+  margin: 0;
+}
+header {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  height: 5rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 2px solid gray;
+}
+main {
+  max-width: 80vw;
+  margin: 5rem auto;
+}
+
+.btn {
+  border: 1px solid #a4e6e8;
+  border-radius: 5px;
+}
+
+header h1 {
+  margin: 0;
+}
+.backdrop {
+  background: #595a5cad;
+  position: fixed; /*position fixed because I want to be on whole viewport, and put top 0, left 0*/
+  z-index: 2; /*z-index works because position specified, */
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.modal {
+  padding: 1rem;
+  border: 2px solid #b8b7b7;
+  border-radius: 8px;
+  background: white;
+}
+.hidden {
+  display: none;
+}
+
+.cart {
+  top: 15vh;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+.cart-main-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+  height: 40px;
+  background: #fff600;
+  font-weight: 600;
+}
+.cart-main-btn:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cart-main-btn img {
+  width: 20px;
+  height: 20px;
+}
+.item img {
+  max-width: 50px;
+  max-height: 50px;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 50vh;
+  overflow-x: auto;
+  margin: auto;
+  padding: 1rem;
+  border: 2px solid #b8b7b7;
+  border-radius: 8px;
+  background: white;
+}
+
+.item,
+.cart-items--header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 2px solid #efefef;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+.cart-empty {
+  list-style: none;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+}
+.item-info .title {
+  margin: 0 0.3rem;
+}
+.remove-item {
+  border: none;
+  background: none;
+  color: #bb0d0d;
+  cursor: pointer;
+}
+.decrease-btn,
+.increase-btn {
+  color: green;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+.cart-total {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+.cart-total--action-btns button {
+  width: 140px;
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  background: var(--main-dark-blue);
+}
+.cart-total--action-btns button:hover {
+  cursor: pointer;
+  color: #a82b2b;
+  box-shadow: 2px 2px 0 rgb(0 0 0 / 10%);
+}
+.cart-buy-btn:disabled:hover {
+  cursor: auto;
+  color: rgba(16, 16, 16, 0.3);
+  box-shadow: none;
+}
+
+#confirm--buy-block {
+  top: 15vh;
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  width: 80%;
+  right: 0;
+  max-width: 600px;
+}
+.confirm--actions {
+  display: flex;
+  justify-content: end;
+}
+.confirm--actions button {
+  padding: 0.5rem;
+  margin: 1rem;
+}
+.confirm--actions button:hover {
+  background: var(--main-light-blue);
+}
+section ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80vw;
+  margin: auto;
+  padding: 0;
+  justify-content: space-between;
+}
+.fruit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+.fruit--img-container {
+  max-width: 130px;
+  max-height: 130px;
+  margin: 0 auto;
+}
+.fruit--img-container img {
+  width: 100%;
+  height: 100%;
+}
+.fruit--img-container h1 {
+  font-size: 1.5rem;
+}
+.fruit--add-btn {
+  width: 80%;
+  margin: 0.2rem auto;
+  padding: 0.5rem;
+  background: var(--main-light-blue);
+  border: 2px solid #6ed7db;
+  border-radius: 10px;
+}
+.fruit--add-btn:active {
+  background: var(--main-dark-blue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.fruit--add-btn:hover {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 480px) {
+  .fruit {
+    width: 45%;
+    margin: 1rem auto;
+  }
+  .cart-items {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .fruit {
+    width: 25%;
+    margin: 1rem;
+  }
+  .cart-items {
+    width: 80vw;
+    max-width: 800px;
+  }
+}

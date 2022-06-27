@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Fairtrade Bananas Loose",
+    "url": "./images/bananas/Fairtrade Bananas Loose.jpg",
+    "description": "Fairtade Bananas",
+    "price": "0.80",
+    "id": "11"
+  },
+  {
+    "title": "Fairtrade Bananas x5",
+    "url": "./images/bananas/Fairtrade Bananas x5.jpg",
+    "description": "Fairtrade Bananas",
+    "price": "0.75",
+    "id": "12"
+  },
+  {
+    "title": "Fairtrade Bananas, SO Organic x6",
+    "url": "./images/bananas/Fairtrade Bananas, SO Organic x6.jpg",
+    "description": "Organic Fairtade Bananas",
+    "price": "1.50",
+    "id": "13"
+  }
+]

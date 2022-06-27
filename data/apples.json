@@ -1,0 +1,30 @@
+[
+    {
+      "title": "Granny Smith Apples Single",
+      "url": "./images/apples/Granny Smith Apples.jpg",
+      "description": "Apple Class I",
+      "price": "0.30",
+      "id": "1"
+    },
+    {
+      "title": "Pink Lady Apple Single",
+      "url": "./images/apples/Pink Lady Apple.jpg",
+      "description": "Apple Class I",
+      "price": "0.50",
+      "id": "2"
+    },
+    {
+      "title": "Royal Gala Apple Single",
+      "url": "./images/apples/Royal Gala Apple.jpg",
+      "description": "Apple Class I",
+      "price": "0.30",
+      "id": "3"
+    },
+    {
+      "title": "Royal Gala Apples x6",
+      "url": "./images/apples/Royal Gala Apples x6.jpg",
+      "description": "Apples Class I",
+      "price": "2.50",
+      "id": "4"
+    }
+  ]

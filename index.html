@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="./scripts/index.js" defer type="module"></script>
+    <title>Fruit shop</title>
+  </head>
+  <body>
+    <template class="product">
+      <li class="fruit">
+        <div class="fruit--img-container">
+          <img src="" alt="" />
+        </div>
+        <h3></h3>
+        <div class="fruit--description"></div>
+        <p class="fruit--price">£ <span></span></p>
+        <button class="fruit--add-btn btn">Add</button>
+      </li>
+    </template>
+    <template class="item-template">
+      <li class="item">
+        <div class="item-info">
+          <img src="" alt="" />
+          <h6 class="title"></h6>
+        </div>
+        <div class="count">
+          <button class="decrease-btn">-</button>
+          <span>0</span>
+          <button class="increase-btn">+</button>
+        </div>
+        <p class="item-price">£ <span></span></p>
+        <button class="remove-item">Remove</button>
+      </li>
+    </template>
+    <div class="backdrop hidden"></div>
+    <div id="confirm--buy-block"></div>
+    <div class="cart hidden">
+      <ul class="cart-items modal">
+        <li class="cart-items--header">
+          <span>Item</span>
+          <span>Quantity</span>
+          <span>Unit price</span>
+          <span></span>
+        </li>
+        <li class="cart-empty"> No items to display </li>
+        <li class="cart-total">
+          <div class="cart-total--q">Total quantity: <span>0</span></div>
+          <div class="cart-total--p">Total: £<span>0.00</span></div>
+          <div class="cart-total--action-btns">
+            <button class="cart-shop-btn btn">Continue shopping</button>
+            <button id="buy" class="cart-buy-btn btn">Buy now</button>
+          </div>
+          
+        </li>
+      </ul>
+    </div>
+    <header>
+      <h1>Fruit Shop</h1>
+
+      <button class="cart-main-btn btn">
+        <img src="./images/basket.png" alt="basket" />
+        <div>£ <span>0.00</span></div>
+      </button>
+    </header>
+    <main>
+      <section id="apples">
+        <h2>Apples</h2>
+        <ul></ul>
+      </section>
+      <section id="grapes">
+        <h2>Grapes</h2>
+        <ul></ul>
+      </section>
+      <section id="bananas">
+        <h2>Bananas</h2>
+        <ul></ul>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
