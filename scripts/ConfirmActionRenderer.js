@@ -7,7 +7,7 @@ export class ConfirmActionRenderer {
   }
   render() {
     const messageEl = document.createElement('div');
-    const message = `Your total amount to pay is £${this.total.toFixed(2)}.
+    const message = `Total amount payable is £${this.total.toFixed(2)}.
     Unfortunately, the payment page is not supported. We will reset your basket.`;
     messageEl.innerHTML = message;
     const actionsBtnsContainer = document.createElement('div');
