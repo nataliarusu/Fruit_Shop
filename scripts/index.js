@@ -34,7 +34,7 @@ getData('./data/apples.json').then((result) => {
   return new FruitsRenderer(apples, fruitsListType.apples).render();
 });
 
-getData('./../data/grapes.json').then((result) => {
+getData('./data/grapes.json').then((result) => {
   grapes = result.map(
     (item) =>
       new Fruit(item.title, item.url, item.description, item.price, item.id)
@@ -42,7 +42,7 @@ getData('./../data/grapes.json').then((result) => {
   return new FruitsRenderer(grapes, fruitsListType.grapes).render();
 });
 
-getData('./../data/bananas.json').then((result) => {
+getData('./data/bananas.json').then((result) => {
   bananas = result.map((item) => {
     return new Fruit(
       item.title,
