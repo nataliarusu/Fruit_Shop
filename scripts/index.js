@@ -26,7 +26,7 @@ let apples = [];
 let grapes = [];
 let bananas = [];
 
-getData('./../data/apples.json').then((result) => {
+getData('https://github.com/nataliarusu/Fruit_Shop/blob/main/data/apples.json').then((result) => {
   apples = result.map(
     (item) =>
       new Fruit(item.title, item.url, item.description, item.price, item.id)
