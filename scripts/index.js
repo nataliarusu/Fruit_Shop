@@ -31,7 +31,7 @@ getData('../data/apples.json').then((result) => {
     (item) =>
       new Fruit(item.title, item.url, item.description, item.price, item.id)
   );
-  return new FruitsRenderer(apples, fruitsListType.apples).render();
+   new FruitsRenderer(apples, fruitsListType.apples).render();//without return should work
 });
 
 getData('../data/grapes.json').then((result) => {
@@ -55,11 +55,11 @@ getData('../data/bananas.json').then((result) => {
   return new FruitsRenderer(bananas, fruitsListType.bananas).render();
 });
 
-const basket = new Basket(basketItemsList);
+const basket = new Basket(basketItemsList);//ul passed for BasketRenderer which will display all items in the basket 
 
 const addToBasket = (ev) => {
-  if (ev.target.nodeName === 'BUTTON') {
-    const fruitType = ev.target.closest('section').id;
+  if (ev.target.nodeName === 'BUTTON') {//nodeName property of Node returns the name of the current node as a string
+    const fruitType = ev.target.closest('section').id;//closest() method of the Element interface traverses the element and its parents (heading toward the document root) until it finds a node that matches the specified CSS selector.
     const id = ev.target.closest('li').id;
     let product;
     switch (fruitType) {
@@ -150,7 +150,7 @@ const confirmEventHandler = () => {
   new ConfirmActionRenderer(confirmActionBlock, basket.totalAmount, confirmed, cancel).render();
 };
 
-for (const type in fruitsListType) {
+for (const type in fruitsListType) {//in obj
   fruitsListType[type].addEventListener('click', addToBasket);
 }
 cartBtn.addEventListener('click', showBasketItems);

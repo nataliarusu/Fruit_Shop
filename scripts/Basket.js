@@ -5,11 +5,11 @@ export class Basket {
   constructor(basketItemsList) {
     this.#items = [];
     this.#totalQuantity = 0;
-    this.basketRenderer = new BasketRenderer(basketItemsList);
+    this.basketRenderer = new BasketRenderer(basketItemsList);//pass ul to constructor
   }
   get totalAmount() {
     const sum = this.#items.reduce(
-      //reduce go through full array like (for loop but this return ...)
+      //reduce go through full array like for loop but this return ...)
       (sum, currentItem) => {
         return (
           (sum * 100 + currentItem.price * currentItem.quantity * 100) / 100
@@ -29,10 +29,11 @@ export class Basket {
 
   addItem(newItem) {
     newItem.id = `${newItem.id}-b`;//generate new id, so DOM els id will be unic
+    //itemsInBasket = #items array
     const item = this.itemsInBasket.find((item) => item.id === newItem.id);//look up if the new added item is in the basket
     if (item) {
-      this.addUnit(item);
-      this.basketRenderer.updateQuantity(
+      this.addUnit(item);//will update quantity, the quantity property each item has if it is already in the basket
+      this.basketRenderer.updateQuantity(//BasketRenderer to update in DOM
         item,
         this.totalAmount,
         this.totalItemsQuantity
