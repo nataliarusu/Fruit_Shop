@@ -1,10 +1,10 @@
 # Fruit_Shop
 
 This project was created as part of the Founders and Coders application process.<br>
-This Fruit Shop is a simple project developed using JavaScript, CSS, and HTML.<br>
-The project allows the user to add fruit to the cart. <br>
-The user can add various fruits to the basket, view the basket, change the number of fruits in the basket, and remove fruits from the basket.<br>
-The cart displays the number of fruits, the price per unit, the total price of the fruits, and the total number of fruits in the cart.<br>
+This Fruit Shop is a simple project developed using JavaScript, CSS, and HTML.
+The project allows the user to add fruits to the cart. 
+User can add various fruits to the basket, view the basket, change the number of fruits in the basket and remove fruits from the basket.
+The cart displays the number of fruits, the price per unit, the total price of the fruits and the total number of fruits in the cart.<br>
 See in action https://nataliarusu.github.io/Fruit_Shop/
 <hr>
 
